@@ -9,7 +9,7 @@ use Mix.Config
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or you later on).
 config :phoenix_api, PhoenixApi.Endpoint,
-  secret_key_base: System.get_env("SECRET_KEY")
+  secret_key_base: System.get_env("SECRET_KEY"),
   http: [port: {:system, "PORT"}],
   url: [scheme: "https", host: "myphoenixapi.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
