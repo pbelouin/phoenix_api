@@ -1,6 +1,8 @@
 defmodule PhoenixApi.PostController do
   use PhoenixApi.Web, :controller
 
+  plug Guardian.Plug.EnsureAuthenticated, handler: PhoenixApi.SessionController
+
   alias PhoenixApi.Post
 
   def index(conn, _params) do
